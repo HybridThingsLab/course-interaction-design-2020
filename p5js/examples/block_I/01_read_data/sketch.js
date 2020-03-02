@@ -40,7 +40,7 @@ function draw() {
   // loop through weather data
   for (let i = 0; i < weatherData.length; i++) {
 
-    // get temperature from one entry
+    // for example get temperature from each entry (see JSON file for further data)
     let temperature = weatherData[i].T;
 
     // draw here
