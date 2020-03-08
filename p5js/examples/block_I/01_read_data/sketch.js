@@ -11,6 +11,7 @@ function preload() {
 
   // load json file with weather data
   file = loadJSON("data/Augsburg.json");
+  // New File available: DWD-Augsburg-2009-2019.json
 
 }
 
