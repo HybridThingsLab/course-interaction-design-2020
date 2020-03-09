@@ -14,7 +14,7 @@ teaching staff: Slawa Gurevich, Martin Spengler, Benjamin Stechele, Andreas Muxe
 * Missing Values (-999) interpolated linear based on previous line
 * Converted to JSON with http://convertcsv.com/csv-to-json.htm
 * Added Header with info about source, values
-### "data":
+#### data:
 ```json
   "STATIONS_ID": "232 = Augsburg",
   "MESS_DATUM": "Tag der Messung (YYY-MM-DD)",
