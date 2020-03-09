@@ -4,7 +4,7 @@ let data;
 
 // visualization
 var counterX = 0;
-var zoom = 10.0;
+var zoom = 5.0;
 
 // preload
 function preload() {
