@@ -34,6 +34,7 @@ function draw() {
 
   // draw line
   stroke(255);
+  strokeWeight(1);
   noFill();
   line(0, height / 2, width, height / 2);
 
@@ -53,13 +54,14 @@ function draw() {
       text(currentYear, counterX + 8, 16);
       // draw vertical line
       stroke(0, 255, 0);
+      strokeWeight(1);
       noFill();
       line(counterX, 0, counterX, height);
     }
     lastYear = currentYear;
 
     // get value of weater data here!!!
-    // for example get average temperature from each day (see JSON file for further data)
+    // for example get average temperature of each day (see JSON file for further data)
     let temperature = data[i].TMK;
 
     // draw here
