@@ -14,7 +14,8 @@ teaching staff: Slawa Gurevich, Martin Spengler, Benjamin Stechele, Andreas Muxe
 * Missing Values (-999) interpolated linear based on previous line
 * Converted to JSON with http://convertcsv.com/csv-to-json.htm
 * Added Header with info about source, values
-### Values
+### values JSON
+```json
   "city_name":"Augsburg",
   "country_name":"Germany",
   "data_source":"https://www.dwd.de/DE/leistungen/klimadatendeutschland/klarchivtagmonat.html?nn=16102",
@@ -37,3 +38,4 @@ teaching staff: Slawa Gurevich, Martin Spengler, Benjamin Stechele, Andreas Muxe
   "TXK": "Tagesmaximum der Lufttemperatur in 2m Höhe (°C)",
   "TNK": "Tagesminimum der Lufttemperatur in 2m Hoehe (°C)",
   "TGK": "Minimum der Lufttemperatur am Erdboden in 5cm Hoehe (°C)",
+  ```
