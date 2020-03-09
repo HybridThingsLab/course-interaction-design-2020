@@ -1,6 +1,6 @@
 // data
-let weatherData;
 let file;
+let data;
 
 // visualization
 var counterX = 0;
@@ -10,8 +10,7 @@ var zoom = 10.0;
 function preload() {
 
   // load json file with weather data
-  file = loadJSON("data/Augsburg.json");
-  // New File available: DWD-Augsburg-2009-2019.json
+  file = loadJSON("data/DWD-Augsburg-2009-2019.json");
 
 }
 
@@ -23,7 +22,7 @@ function setup() {
   noLoop();
 
   // get weather data
-  weatherData = file.data;
+  data = file.data;
 
 }
 
@@ -38,18 +37,39 @@ function draw() {
   noFill();
   line(0, height / 2, width, height / 2);
 
-  // loop through weather data
-  for (let i = 0; i < weatherData.length; i++) {
+  // needed for check if year changed in data
+  let lastYear = "";
 
-    // for example get temperature from each entry (see JSON file for further data)
-    let temperature = weatherData[i].T;
+  // loop through weather data
+  for (let i = 0; i < data.length; i++) {
+
+    // get current year
+    let currentYear = data[i].MESS_DATUM.substr(0, 4);
+    // check if new
+    if (currentYear != lastYear) {
+      // year as text
+      fill(0, 255, 0);
+      noStroke();
+      text(currentYear, counterX + 8, 16);
+      // draw vertical line
+      stroke(0, 255, 0);
+      noFill();
+      line(counterX, 0, counterX, height);
+    }
+    lastYear = currentYear;
+
+    // get value of weater data here!!!
+    // for example get average temperature from each day (see JSON file for further data)
+    let temperature = data[i].TMK;
 
     // draw here
-    counterX += width / weatherData.length;
     stroke(255);
-    strokeWeight(width / weatherData.length);
+    strokeWeight(width / data.length);
     noFill();
     line(counterX, height / 2, counterX, height / 2 - temperature * zoom);
+
+    // counter x position
+    counterX += width / data.length;
 
   }
   counterX = 0;
