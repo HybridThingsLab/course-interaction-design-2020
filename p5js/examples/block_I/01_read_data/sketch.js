@@ -10,6 +10,8 @@ var zoom = 5.0;
 function preload() {
 
   // load json file with weather data
+
+  // file = loadJSON("data/DWD-Augsburg-2009-2019.json"); // >> run on (local) webserver
   file = loadJSON("https://raw.githubusercontent.com/HybridThingsLab/course-interaction-design/master/p5js/examples/block_I/01_read_data/data/DWD-Augsburg-2009-2019.json");
 
 }
