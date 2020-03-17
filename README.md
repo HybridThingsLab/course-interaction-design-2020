@@ -23,7 +23,7 @@ recommended extensions:
 * Live Server
 * p5 Snippets
 
-How To Install Exentsion for Visual Studio Code, https://www.youtube.com/watch?v=PmdbndOoKq4
+How to install extensions for Visual Studio Code, https://www.youtube.com/watch?v=PmdbndOoKq4
 
 ### recommended tutorials
 * beginner P5.js tutorials by Daniel Shiffmann on TheCodingTrain, https://thecodingtrain.com/beginners/p5js/
