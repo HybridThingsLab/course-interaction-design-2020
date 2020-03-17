@@ -1,3 +1,1 @@
-# course-interaction-design
-course fundamentals of interaction design SS2020
-HS Augsburg, IA2
+# IA Grundlagen Interaktiver Gestaltung SS2020, Hochschule Augsburg, Fakultät Gestaltung
