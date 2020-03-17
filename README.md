@@ -15,6 +15,7 @@ P5.js, https://p5js.org
 
 ### editor
 Visual Studio Code (free), https://code.visualstudio.com
+
 recommended extensions:
 * Beautify
 * German Language Pack for Visual Studio Code
