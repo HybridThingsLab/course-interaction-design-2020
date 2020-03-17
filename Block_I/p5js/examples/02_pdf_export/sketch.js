@@ -8,7 +8,7 @@ function setup() {
 
   // canvas
   createCanvas(1024, 768, SVG);
-  noLoop();
+  noLoop(); // draw loop is just executed once
 
   // create and start writing pdf
   pdf = createPDF();

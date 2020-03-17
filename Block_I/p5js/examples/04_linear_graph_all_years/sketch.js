@@ -40,9 +40,27 @@ function draw() {
   noFill();
   line(0, height / 2, width, height / 2);
 
+  // needed to check if year changed in next for-loop
+  let lastYear = "";
 
   // loop through weather data
   for (let i = 0; i < data.length; i++) {
+
+    // get current year
+    let currentYear = data[i].MESS_DATUM.substr(0, 4);
+    // check if new
+    if (currentYear != lastYear) {
+      // year as text
+      fill(0, 255, 0);
+      noStroke();
+      text(currentYear, counterX + 8, 16);
+      // draw vertical line
+      stroke(0, 255, 0);
+      strokeWeight(1);
+      noFill();
+      line(counterX, 0, counterX, height);
+    }
+    lastYear = currentYear;
 
     // GET VALUE(S) OF WEATHER DATA HERE!
     // for example get average temperature of each day (see JSON file for further data)
