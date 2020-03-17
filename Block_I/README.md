@@ -1,4 +1,4 @@
-# dataset weather
+# data
 ## DWD-Augsburg-2009-2019.json
 * Station: 232 Augsburg
 * Base Data: produkt_klima_tag_19470101_20181231_00232.txt
