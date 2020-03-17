@@ -12,16 +12,18 @@ teaching stuff: Slawa Gurevich, Martin Spengler, Benjamin Stechele, Andreas Muxe
 
 ### P5.js
 P5.js, https://p5js.org
+P5.js VS Processing, https://github.com/processing/p5.js/wiki/Processing-transition 
+Libraries, https://p5js.org/libraries/
 
 ### editor
 Visual Studio Code (free), https://code.visualstudio.com
 
 recommended extensions:
-* Beautify
-* German Language Pack for Visual Studio Code
+* p5 Snippets
 * JSON Tools
 * Live Server
-* p5 Snippets
+* German Language Pack for Visual Studio Code
+* Beautify
 
 How to install extensions for Visual Studio Code, https://www.youtube.com/watch?v=PmdbndOoKq4
 
