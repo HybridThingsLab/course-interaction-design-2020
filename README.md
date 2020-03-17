@@ -37,5 +37,5 @@ note: in the tutorials another editor is used. But currently Shiffmann also uses
 ## further links
 
 ### creative coding
-Book 'Generative Gestaltung', http://www.generative-gestaltung.de/2/
-Programming Design Systems by Rune Madsen, https://programmingdesignsystems.com
+* Book 'Generative Gestaltung', http://www.generative-gestaltung.de/2/
+* Programming Design Systems by Rune Madsen, https://programmingdesignsystems.com
