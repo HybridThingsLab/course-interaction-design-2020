@@ -8,3 +8,24 @@ teaching stuff: Slawa Gurevich, Martin Spengler, Benjamin Stechele, Andreas Muxe
 * [Block II: Interaktive Systeme](https://github.com/HybridThingsLab/course-interaction-design/tree/master/Block_II)
 * [Block III: Physische Systeme](https://github.com/HybridThingsLab/course-interaction-design/tree/master/Block_III)
 
+## Tools
+
+### editor
+Visual Studio Code (free), https://code.visualstudio.com
+recommended extensions:
+* Beautify
+* German Language Pack for Visual Studio Code
+* JSON Tools
+* Live Server
+* p5 Snippets
+
+How To Install Exentsion for Visual Studio Code, https://www.youtube.com/watch?v=PmdbndOoKq4
+
+### recommended tutorials
+* beginner P5.js tutorials by Daniel Shiffmann on TheCodingTrain, https://thecodingtrain.com/beginners/p5js/
+* Introduction p5.js: https://www.youtube.com/watch?v=8j0UDiN7my4
+* Comparing p5.js and Processing (Daniel Shiffmann)
+    * Part I: https://www.youtube.com/watch?v=AmlAiKsiy0o
+    * Part II: https://www.youtube.com/watch?v=AsjPJ5AWkDc 
+
+note: in the tutorials another editor is used. But currently Shiffmann also uses Visual Studio Code.
