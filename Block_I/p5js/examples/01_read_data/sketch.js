@@ -40,7 +40,7 @@ function draw() {
   noFill();
   line(0, height / 2, width, height / 2);
 
-  // needed for check if year changed in data
+  // needed to check if year changed in next for-loop
   let lastYear = "";
 
   // loop through weather data
@@ -62,11 +62,11 @@ function draw() {
     }
     lastYear = currentYear;
 
-    // get value of weater data here!!!
+    // GET VALUE(S) OF WEATHER DATA HERE!
     // for example get average temperature of each day (see JSON file for further data)
     let temperature = data[i].TMK;
 
-    // draw here
+    // draw here (WHERE THE MAGIC HAPPENS!)
     stroke(255);
     strokeWeight(width / data.length);
     noFill();
