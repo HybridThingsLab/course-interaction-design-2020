@@ -1,6 +1,6 @@
 # Grundlagen Interaktiver Gestaltung / Fundamentals of Interaction Design
-Interaktive Medien / Interactive Media
-IA 2, summer-term 2020
+Interaktive Medien / Interactive Media</br>
+IA 2, summer-term 2020</br>
 University of Applied Sciences Augsburg, Faculty of Design, https://www.hs-augsburg.de/Gestaltung.html
 
 teaching stuff: Slawa Gurevich, Martin Spengler, Benjamin Stechele, Andreas Muxel, Daniel Rothaug
