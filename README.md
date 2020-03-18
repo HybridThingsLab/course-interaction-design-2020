@@ -14,6 +14,7 @@ teaching stuff: Slawa Gurevich, Martin Spengler, Benjamin Stechele, Andreas Muxe
 P5.js, https://p5js.org
 P5.js VS Processing, https://github.com/processing/p5.js/wiki/Processing-transition 
 Libraries, https://p5js.org/libraries/
+Learn, https://p5js.org/learn/
 
 ### editor
 Visual Studio Code (free), https://code.visualstudio.com
@@ -26,6 +27,15 @@ recommended extensions:
 * Beautify
 
 How to install extensions for Visual Studio Code, https://www.youtube.com/watch?v=PmdbndOoKq4
+
+### browser
+we strongly recommend Google Chrome, https://www.google.com/chrome/
+
+How to set Chrome as your default browser for Live Server in Visual Studio Code:
+* install extension 'Live Server' (see instructions above)
+* go your Preferences
+* search for 'browser'
+* in settings 'Live Server > Settings: Custom Browser' choose 'Chrome'
 
 ### recommended tutorials
 * beginner P5.js tutorials by Daniel Shiffmann on TheCodingTrain, https://thecodingtrain.com/beginners/p5js/
