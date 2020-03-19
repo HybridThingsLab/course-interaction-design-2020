@@ -11,10 +11,10 @@ teaching stuff: Slawa Gurevich, Martin Spengler, Benjamin Stechele, Andreas Muxe
 ## tools
 
 ### P5.js
-P5.js, https://p5js.org
-P5.js VS Processing, https://github.com/processing/p5.js/wiki/Processing-transition 
-Libraries, https://p5js.org/libraries/
-Learn, https://p5js.org/learn/
+* P5.js, https://p5js.org
+* P5.js VS Processing, https://github.com/processing/p5.js/wiki/Processing-transition 
+* Libraries, https://p5js.org/libraries/
+* Learn, https://p5js.org/learn/
 
 ### editor
 Visual Studio Code (free), https://code.visualstudio.com
