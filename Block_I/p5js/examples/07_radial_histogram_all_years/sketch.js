@@ -31,13 +31,13 @@ function setup() {
 // draw
 function draw() {
 
+  // clear background
+  background(0);
+
   // counter positions + rotation
   let counterX = 1;
   let counterY = 1;
   let counterRotation = 0;
-
-  // clear background
-  background(0);
 
   // needed to check if year changed in next for-loop
   let lastYear = "";
@@ -65,7 +65,7 @@ function draw() {
       }
 
       // year as text
-      fill(0, 255, 0);
+      fill(255);
       noStroke();
       textAlign(CENTER);
       text(currentYear, centerX, centerY + 8);

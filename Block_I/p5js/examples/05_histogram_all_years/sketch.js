@@ -51,7 +51,7 @@ function draw() {
     // check if new
     if (currentYear != lastYear) {
       // year as text
-      fill(0, 255, 0);
+      fill(255);
       noStroke();
       text(currentYear, counterX + 8, 16);
       // draw vertical line

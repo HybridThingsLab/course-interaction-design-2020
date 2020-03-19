@@ -53,7 +53,7 @@ function draw() {
 
       // year as text one time
       if (drawOneTime == true) {
-        fill(0, 255, 0);
+        fill(255);
         noStroke();
         text(currentYear, 16, 16);
         drawOneTime = false;
