@@ -4,7 +4,7 @@
 * Base Data: produkt_klima_tag_19470101_20181231_00232.txt
 * From: https://www.dwd.de/DE/leistungen/klimadatendeutschland/klarchivtagmonat.html?nn=16102				
 * More Info: https://www.dwd.de/DE/leistungen/klimadatendeutschland/beschreibung_tagesmonatswerte.html?nn=16102&lsbId=526270							
-* Reduced to 10 Years (2009-2019)
+* Reduced to 10 Years (2009-2018)
 * Missing Values (-999) interpolated linear based on previous line
 * Converted to JSON with http://convertcsv.com/csv-to-json.htm
 * Added Header with info about source, values
