@@ -3,8 +3,8 @@ let file;
 let data;
 
 // visualization
-var zoom = 5.0;
-var diameterCircle = 80;
+let zoom = 5.0;
+let diameterCircle = 80;
 
 // preload
 function preload() {

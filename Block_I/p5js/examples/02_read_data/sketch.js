@@ -3,8 +3,8 @@ let file;
 let data;
 
 // visualization
-var counterX = 0;
-var zoom = 5.0;
+let counterX = 0;
+let zoom = 5.0;
 
 // preload
 function preload() {
