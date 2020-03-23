@@ -15,7 +15,8 @@ In the end there are a thousand ways to code with p5.js - let's stick to the fol
 Download and install Visual Studio Code (free), https://code.visualstudio.com
 
 ### P5.js Library
-P5.js basically is Processing in a Browser. 
+P5.js basically is Processing in a Browser.
+
 We neatly packed this into the repository you will download in a later step.
 More Details on P5.js:
 * P5.js, https://p5js.org
@@ -25,16 +26,20 @@ More Details on P5.js:
 
 ### Extensions for Visual Studio Code
 In Visual Studio Code click the Button with the 4 squares "Extensions", search for and "Install" the extension.
+
 * p5js Snippets
 * JSON Tools
 * Live Server
 * Beautify
 * Only if __REALLY__ needed: German Language Pack for Visual Studio Code
+
 Tutorial on Extensions: https://www.youtube.com/watch?v=PmdbndOoKq4
 
 ### Browser
 We strongly recommend Google Chrome, https://www.google.com/chrome/
+
 How to set Chrome as your default browser for Live Server in Visual Studio Code:
+
 * Install extension 'Live Server' (see instructions above)
 * Go to File > Preferences > Settings
 * Search for "browser"
@@ -48,11 +53,13 @@ We packed a bunch of examples from this course as well together with the files n
 
 ### Get going
 * In Visual Studio Code klick the "Files" Icon and navigate to "Block_I > p5js > examples > template"
+
 You will see some files but these are the most important:
-1. sketch.js: Thats where you code
-2. index.html: Thats where you can see your result
-* Click "sketch.js" to open it in the code editor
-* Right klick "index.html" > "Open with Live Server" to open it in your browser
+
+1. `sketch.js`: Thats where you code
+2. `index.html`: Thats where you can see your result
+* Click `sketch.js` to open it in the code editor
+* Right klick `index.html` > "Open with Live Server" to open it in your browser
 * If asked, allow the html to access the internet
 
 ## recommended tutorials
