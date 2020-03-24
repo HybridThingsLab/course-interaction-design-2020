@@ -51,6 +51,12 @@ We packed a bunch of examples from this course as well together with the files n
 1. __PREFERRED__: In Visual Studio Code click the "Files" Icon, then "Clone Repository", paste the Repository URL https://github.com/HybridThingsLab/course-interaction-design, hit Enter, create a folder for our files and select it as download location.
 2. Fallback: Download the repository from the GitHub Website (https://github.com/HybridThingsLab/course-interaction-design). Use button "Clone or Download" on the top right side of the page, download the ZIP and extract it.
 
+Whenever we will make a update to the repository, you can pull those changes to your local folder structure:
+
+* Click the "Source Control" icon
+* Click the three little dots above the file list
+* Click "pull"
+
 ### Get going
 * In Visual Studio Code klick the "Files" Icon and navigate to "Block_I > p5js > examples > template"
 
@@ -58,12 +64,15 @@ You will see some files but these are the most important:
 
 1. `sketch.js`: Thats where you code
 2. `index.html`: Thats where you can see your result
+
 * Click `sketch.js` to open it in the code editor
 * Right klick `index.html` > "Open with Live Server" to open it in your browser
 * If asked, allow the html to access the internet
 
-## Recommended tutorials
+### Make it your code!
+Please create your own code folder besides the `examples` folder and copy one of the example folders over, so that you have `Block_I/p5js/martin/01_read_data` for example. You should not change our examples as we may update them later.
 
+## Recommended tutorials
 * beginner P5.js tutorials by Daniel Shiffmann on TheCodingTrain, https://thecodingtrain.com/beginners/p5js/
 * Introduction p5.js: https://www.youtube.com/watch?v=8j0UDiN7my4
 * Comparing p5.js and Processing (Daniel Shiffmann)
