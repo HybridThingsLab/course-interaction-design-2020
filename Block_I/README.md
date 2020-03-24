@@ -3,7 +3,8 @@
 * Station: 232 Augsburg
 * Base Data: produkt_klima_tag_19470101_20181231_00232.txt
 * From: https://www.dwd.de/DE/leistungen/klimadatendeutschland/klarchivtagmonat.html?nn=16102				
-* More Info: https://www.dwd.de/DE/leistungen/klimadatendeutschland/beschreibung_tagesmonatswerte.html?nn=16102&lsbId=526270							
+* More Info: https://www.dwd.de/DE/leistungen/klimadatendeutschland/beschreibung_tagesmonatswerte.html?nn=16102&lsbId=526270
+* One Dataset per day (median, minimum or maximum values)					
 * Reduced to 10 Years (2009-2018)
 * Missing Values (-999) interpolated linear based on previous line
 * Converted to JSON with http://convertcsv.com/csv-to-json.htm
@@ -23,7 +24,7 @@
   "NM": "Tagesmittel des Bedeckungsgrades (Achtel)",
   "VPM": "Tagesmittel des Dampfdruckes (hpa)",
   "PM": "Tagesmittel des Luftdrucks (hpa)",
-  "TMK": "Tagesmittel derTemperatur (°C)",
+  "TMK": "Tagesmittel der Temperatur (°C)",
   "UPM": "Tagesmittel der Relativen Feuchte (%)",
   "TXK": "Tagesmaximum der Lufttemperatur in 2m Höhe (°C)",
   "TNK": "Tagesminimum der Lufttemperatur in 2m Hoehe (°C)",
