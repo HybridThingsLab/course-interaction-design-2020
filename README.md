@@ -62,17 +62,20 @@ You will see some files but these are the most important:
 * Right klick `index.html` > "Open with Live Server" to open it in your browser
 * If asked, allow the html to access the internet
 
-## recommended tutorials
+## Recommended tutorials
+
 * beginner P5.js tutorials by Daniel Shiffmann on TheCodingTrain, https://thecodingtrain.com/beginners/p5js/
 * Introduction p5.js: https://www.youtube.com/watch?v=8j0UDiN7my4
 * Comparing p5.js and Processing (Daniel Shiffmann)
     * Part I: https://www.youtube.com/watch?v=AmlAiKsiy0o
     * Part II: https://www.youtube.com/watch?v=AsjPJ5AWkDc 
 
-note: in the tutorials another editor is used. But currently Shiffmann also uses Visual Studio Code.
+Note: in the tutorials another editor is used. But currently Shiffmann also uses Visual Studio Code.
 
-## further links
+## Further links
 
-### creative coding
+### Creative coding
 * Book 'Generative Gestaltung', http://www.generative-gestaltung.de/2/
 * Programming Design Systems by Rune Madsen, https://programmingdesignsystems.com
+
+## TEST LINE
