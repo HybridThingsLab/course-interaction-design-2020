@@ -61,7 +61,7 @@ function draw() {
   text(year, 16, 16);
 
 
-  // loop through weather data of specific year
+  // loop through weather data
   for (let i = 0; i < dataYear.length; i++) {
 
     // GET VALUE(S) OF WEATHER DATA HERE!
