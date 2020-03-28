@@ -28,6 +28,7 @@ function setup() {
   // get all weather data
   data = file.data;
 
+  // loop through all data
   for (let i = 0; i < data.length; i++) {
 
     // get current year
