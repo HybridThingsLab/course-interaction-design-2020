@@ -1,14 +1,18 @@
+// image
+let img;
+
 // data
 let file;
-let year = 2018; // change here
+let year = 2016; // change here
 let data;
 let dataYear = [];
 
 // visualization
 let counterX = 0;
 let counterY = 0;
-let offsetX = 16;
-let offsetY = 16;
+let offsetX = 0;
+let offsetY = 24;
+let c1, c2, c3, c4, c5;
 
 // preload
 function preload() {
@@ -18,6 +22,9 @@ function preload() {
   //file = loadJSON("data/DWD-Augsburg-2009-2019.json"); // >> run on (local) webserver
   file = loadJSON("https://raw.githubusercontent.com/HybridThingsLab/course-interaction-design/master/Block_I/data/DWD-Augsburg-2009-2019.json");
 
+  // load image augsburg
+  img = loadImage('data/augsburg_turm.jpg');
+
 }
 
 // setup
@@ -26,6 +33,13 @@ function setup() {
   // canvas
   createCanvas(1024, 768);
   noLoop(); // draw loop is just executed once
+
+  // define colors
+  c1 = color(0, 0, 255);
+  c2 = color(0, 125, 255);
+  c3 = color(0, 255, 255);
+  c4 = color(255, 255, 0);
+  c5 = color(255, 0, 0);
 
   // get all weather data
   data = file.data;
@@ -52,12 +66,6 @@ function draw() {
   // clear background
   background(0);
 
-  // draw year
-  fill(255);
-  noStroke();
-  textSize(14);
-  text(year, offsetX, offsetY);
-
   // current month
   let lastMonth = "";
 
@@ -71,14 +79,8 @@ function draw() {
     if (currentMonth != lastMonth) {
 
       // counters position
-      counterY += height / 13;
+      counterY += height / 12 / 1.3;
       counterX = 0;
-
-      // show current month
-      fill(0, 255, 0);
-      noStroke();
-      textSize(12);
-      text(getMonth(currentMonth).toUpperCase(), offsetX + counterX, counterY);
 
       // set last month to current month
       lastMonth = currentMonth;
@@ -89,67 +91,30 @@ function draw() {
     let temperature = dataYear[i].TMK;
 
     // draw here (WHERE THE MAGIC HAPPENS!)
-    fill(255);
-    noStroke();
-    textSize(12);
-    textAlign(LEFT, CENTER);
-    text(temperature.toFixed(1) + "°", offsetX + counterX, counterY + offsetY); // 'toFixed()' used to always get a float for example '10.0'
-
+    if (temperature <= -15.0) {
+      let inter = map(temperature, -30.0, -15.0, 0, 1);
+      tint(lerpColor(c1, c2, inter));
+    }
+    if ((temperature > -15.0) && (temperature <= 0.0)) {
+      let inter = map(temperature, -15.0, 0.0, 0, 1);
+      tint(lerpColor(c2, c3, inter));
+    }
+    if ((temperature > 0.0) && (temperature <= 15.0)) {
+      let inter = map(temperature, 0.0, 15.0, 0, 1);
+      tint(lerpColor(c3, c4, inter));
+    }
+    if (temperature > 15.0) {
+      let inter = map(temperature, 15.0, 30, 0, 1);
+      tint(lerpColor(c4, c5, inter));
+    }
+    image(img, offsetX + counterX, offsetY + counterY, width / 32, width / 32 * 1.5);
 
     // counter x position
-    counterX += width / 32;
+    counterX += width / 31;
 
   }
 
+  save("screen.png");
 
-}
-
-// custom functions
-function getMonth(monthAsNumber) {
-
-  let month = "";
-
-  switch (monthAsNumber) {
-    case '01':
-      month = "Januar";
-      break;
-    case '02':
-      month = "Februar";
-      break;
-    case '03':
-      month = "März";
-      break;
-    case '04':
-      month = "April";
-      break;
-    case '05':
-      month = "Mai";
-      break;
-    case '06':
-      month = "Juni";
-      break;
-    case '07':
-      month = "Juli";
-      break;
-    case '08':
-      month = "August";
-      break;
-    case '09':
-      month = "September";
-      break;
-    case '10':
-      month = "Oktober";
-      break;
-    case '11':
-      month = "November";
-      break;
-    case '12':
-      month = "Dezember";
-      break;
-    default:
-      // code block
-  }
-
-  return month;
 
 }

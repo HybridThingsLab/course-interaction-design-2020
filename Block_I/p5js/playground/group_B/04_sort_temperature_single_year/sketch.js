@@ -86,7 +86,7 @@ function draw() {
   // draw year
   fill(255);
   noStroke();
-  text(year + ": temperature", 8, 32);
+  text(year + ": temperature", 8, height / 2 - height / 4 - 16);
 
 
   // loop through temperatures
