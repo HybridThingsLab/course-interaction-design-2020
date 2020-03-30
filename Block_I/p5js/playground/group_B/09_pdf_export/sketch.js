@@ -1,13 +1,12 @@
 // PDF exporter, see also https://github.com/zenozeng/p5.js-pdf
 // include "p5.pdf.js" and "p5.svg.js" in index.html
 let pdf;
-let exportPDF = false;
 
 // setup
 function setup() {
 
   // canvas
-  createCanvas(1024, 768, SVG);
+  createCanvas(1024, 768, SVG); // SVG!!!
   noLoop(); // draw loop is just executed once
 
   // create and start writing pdf
