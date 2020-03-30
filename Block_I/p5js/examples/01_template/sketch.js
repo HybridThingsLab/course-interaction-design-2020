@@ -27,7 +27,7 @@ function draw() {
     // let newYear = data[i].MESS_DATUM.split("-")[0]
     let newYear = split(data[i].MESS_DATUM, '-')[0]
 
-    if( data[i].MESS_DATUM.match("01-01") ) {
+    if (data[i].MESS_DATUM.match("01-01")) {
       strokeWeight(1);
       stroke(200);
       line(xPos, 0, xPos, height);
@@ -37,10 +37,10 @@ function draw() {
     }
 
     stroke(220, 220, 0);
-    strokeWeight(width/data.length);
-    line(xPos, height / 2, xPos, height/2 - data[i].FM * 3)
+    strokeWeight(width / data.length);
+    line(xPos, height / 2, xPos, height / 2 - data[i].FM * 3)
     stroke(200, 0, 220)
-    line(xPos, height / 2, xPos, height/2 + data[i].TMK)
+    line(xPos, height / 2, xPos, height / 2 + data[i].TMK)
 
     // line(xPos, 0, 0, height)
   }
