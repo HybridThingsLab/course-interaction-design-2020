@@ -2,10 +2,6 @@
 let file;
 let data;
 
-// visualization
-let counterX = 0;
-let zoom = 5.0;
-
 // preload
 function preload() {
 
@@ -33,12 +29,6 @@ function draw() {
 
   // clear background
   background(0);
-
-  // draw line
-  stroke(255);
-  strokeWeight(1);
-  noFill();
-  line(0, height / 2, width, height / 2);
 
   // variable to draw text year just once in for-loop
   let drawOneTime = true;
@@ -71,22 +61,35 @@ function draw() {
       monthlyData[currentMonth] = monthlyData[currentMonth] + precipitation;
       
       // draw here (WHERE THE MAGIC HAPPENS!)
-      stroke(255);
-      strokeWeight(width / 365);
-      noFill();
-      line(counterX, height / 2, counterX, height / 2 - precipitation * zoom);
-
-      // counter x position
-      counterX += width / 365;
-
+      // We do not want to draw the daily stuff, thus we do nothing here
     }
-
   }
-  counterX = 0;
-
   // loop through monthly data
+  
+  // This is how you find and log the biggest value of a array
+  console.log("Max: " + max(monthlyData));
+
   for (let i = 0; i < monthlyData.length; i++) {
     console.log(monthlyData[i]);
+    stroke(255);
+    strokeWeight(3);
+    noFill();
+    let xPos = map(i, 0, 11, 100, width-100); // Let the circles spread from left (100) to right (width-100)
+    let yPos = height / 2; // Let the be in the middle (y-axis)
+    let circleSize = map(monthlyData[i], 0, max(monthlyData), 0, 200); // Smallest circle (zero rain) should have 0 diameter, biggest circlle (max amount of rain of all months) should be 200
+    
+    // Draw the circle
+    circle(xPos, yPos, circleSize);
+
+    // Write the month and the cummulated ammount of percipitation
+    noStroke();
+    fill(255);
+    textSize(12);
+    textAlign(CENTER, CENTER);
+    text(nf(i,2), xPos, yPos + 150); // With zeroes at the beginning as months are used to be printed
+    
+    textSize(10);
+    text(round(monthlyData[i]) + " mm", xPos, yPos + 170); // Rounded because whats the point of half a mm?
   }
 
 }
