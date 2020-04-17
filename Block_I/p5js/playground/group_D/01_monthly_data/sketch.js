@@ -43,7 +43,7 @@ function draw() {
   // variable to draw text year just once in for-loop
   let drawOneTime = true;
   // Array for 12 Months, initialised with zeroes so that we can add to it later
-  let monthlyData = [0,0,0,0,0,0,0,0,0,0,0,0];
+  let monthlyData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
   // loop through weather data
   for (let i = 0; i < data.length; i++) {
@@ -67,9 +67,9 @@ function draw() {
       let precipitation = data[i].RSK;
 
       // Which Month is it? 01 = January,  -1 because we want to use this to access the array which starts at 0
-      let currentMonth = data[i].MESS_DATUM.substr(5, 2)-1;
+      let currentMonth = data[i].MESS_DATUM.substr(5, 2) - 1;
       monthlyData[currentMonth] = monthlyData[currentMonth] + precipitation;
-      
+
       // draw here (WHERE THE MAGIC HAPPENS!)
       stroke(255);
       strokeWeight(width / 365);
