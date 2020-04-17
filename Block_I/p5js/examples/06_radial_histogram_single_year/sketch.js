@@ -4,7 +4,7 @@ let data;
 
 // visualization
 let zoom = 5.0;
-let diameterCircle = 80;
+let radiusCircle = 150; // This value was too small to allow very low temperatures like -20°
 
 // preload
 function preload() {
@@ -58,12 +58,12 @@ function draw() {
       let temperature = data[i].TMK;
 
       // calculate points of line
-      let r1 = diameterCircle + temperature * zoom;
+      let r1 = radiusCircle + temperature * zoom;
       let a1 = TWO_PI * (i / 365) - HALF_PI;
       let x1 = width / 2 + r1 * cos(a1);
       let y1 = height / 2 + r1 * sin(a1);
 
-      let r2 = diameterCircle;
+      let r2 = radiusCircle;
       let a2 = TWO_PI * (i / 365) - HALF_PI;
       let x2 = width / 2 + r2 * cos(a2);
       let y2 = height / 2 + r2 * sin(a2);
@@ -76,6 +76,27 @@ function draw() {
 
     }
 
+  }
+  
+  
+  // Reference Circles
+  // Array for 12 Months, initialised with zeroes so that we can add to it later
+  let temperatureCircles = [-20,-10,0,10,20,30];
+
+  for (let i = 0; i < temperatureCircles.length; i++) {
+    // Draw the reference size
+    noFill();
+    stroke(255,0,0);
+    strokeWeight(3);
+    circle(width / 2, height / 2, (radiusCircle + (temperatureCircles[i] * zoom))*2); // 0° Circle, radius*2 because diameter
+
+    // Write the value of the circle
+    noStroke();
+    fill(255, 0, 0);
+    textSize(14);
+    textStyle(BOLD);
+    textAlign(LEFT, CENTER);
+    text(temperatureCircles[i] + "°", width / 2 + (radiusCircle + (temperatureCircles[i] * zoom)) + 5, height / 2); // With zeroes at the beginning as months are used to be printed
   }
 
 }
