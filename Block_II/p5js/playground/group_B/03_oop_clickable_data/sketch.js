@@ -119,6 +119,7 @@ class Box {
       // mouse pressed
       if (mouseIsPressed) {
         fill(0, 255, 9);
+        text("box width ID " + this.id + " clicked", 8, 32);
       } else {
         fill(255);
       }
