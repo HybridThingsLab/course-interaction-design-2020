@@ -8,6 +8,7 @@ let data;
 // visualization
 let counterData = 0;
 let zoom = 10.0;
+let hintAudio = true;
 
 // audio
 let osc;
@@ -31,7 +32,6 @@ function setup() {
   // oscillator
   osc = new p5.TriOsc(); // set frequency and type
   osc.amp(0.5);
-  osc.start();
 
   // get all weather data
   data = file.data;
@@ -44,9 +44,18 @@ function draw() {
   // clear background
   background(0);
 
+  // show hint audio
+  if (hintAudio) {
+    fill(255);
+    textSize(24);
+    textAlign(CENTER);
+    text("PRESS MOUSE TO HEAR SOUND", width / 2, 100);
+  }
+
   // show current date
   fill(255);
   noStroke();
+  textSize(12);
   textAlign(LEFT);
   text(data[counterData].MESS_DATUM, 8, 16);
 
@@ -59,7 +68,7 @@ function draw() {
   text(wind + " m/s", width / 2 + 28, height / 2 + 24);
 
   // sonify wind speed 
-  let freq = map(wind, 0, 20, 40, 880);
+  let freq = map(wind, 0, 20, 80, 200);
   osc.freq(freq);
 
 
@@ -72,4 +81,12 @@ function draw() {
     counterData = 0;
   }
 
+}
+
+// mouse interaction
+function mouseReleased() {
+  // mouse interaction needed to use sound
+  // see also https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio
+  osc.start();
+  hintAudio = false;
 }
