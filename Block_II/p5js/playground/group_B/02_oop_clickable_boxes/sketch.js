@@ -22,8 +22,9 @@ function setup() {
     let h = 20;
     let x = i * 40 + 16 - w / 2;
     let y = height / 2 - h / 2;
+    let c = color(random(255), random(255), random(255));
     // init box (x, y, widht, height)
-    let box = new Box(i, x, y, w, h);
+    let box = new Box(i, x, y, w, h, c);
     boxes.push(box);
   }
 
@@ -45,13 +46,14 @@ function draw() {
 // classes
 class Box {
 
-  constructor(id, x, y, w, h) {
+  constructor(id, x, y, w, h, c) {
     // properties box
     this.id = id;
     this.x = x;
     this.y = y;
     this.w = w;
     this.h = h;
+    this.color = c;
     // collision
     this.hitMouse = false;
   }
@@ -68,7 +70,7 @@ class Box {
         fill(255);
       }
     } else {
-      noFill();
+      fill(this.color);
     }
 
     // draw box

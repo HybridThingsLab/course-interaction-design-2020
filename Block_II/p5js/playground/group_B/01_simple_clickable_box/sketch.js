@@ -24,7 +24,7 @@ function draw() {
   // clear background
   background(0);
 
-  // propoerties box
+  // properties box
   let w = 40;
   let h = 40;
   let x = width / 2 - w / 2;
