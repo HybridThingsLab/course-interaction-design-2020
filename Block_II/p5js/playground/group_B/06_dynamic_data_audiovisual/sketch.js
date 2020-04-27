@@ -68,7 +68,7 @@ function draw() {
   text(wind + " m/s", width / 2 + 28, height / 2 + 24);
 
   // sonify wind speed 
-  let freq = map(wind, 0, 20, 80, 200);
+  let freq = map(wind, 0, 20, 80, 1000);
   osc.freq(freq);
 
 

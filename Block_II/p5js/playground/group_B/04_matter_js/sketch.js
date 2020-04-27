@@ -71,7 +71,8 @@ function setup() {
     wind = wind * zoom;
 
     // add box
-    boxes.push(Bodies.rectangle(counterX, height / 2 - wind / 2 - 3, 2, wind));
+    let body = Bodies.rectangle(counterX, height / 2 - wind / 2 - 3, 2, wind);
+    boxes.push(body);
 
     // counter X
     counterX += width / dataYear.length;
@@ -83,7 +84,7 @@ function setup() {
   // ground
   ground = Bodies.rectangle(width / 2, height / 2, canvas.width, 6, {
     isStatic: true,
-    angle: Math.PI * 0.00
+    angle: Math.PI * 0.0
   });
   // add to world
   World.add(engine.world, ground);
