@@ -66,15 +66,18 @@ function setup() {
 }
 
 function mousePressed() {
-  let shortestDistanceBubble;
+  let shortestDistanceBubble; // The Bubble that was the closest to the mouse
+  let shortestDistance; // How far was it away
 
   // Check which bubble is closest to the click, otherwise if they overlap all bubbles the mouse was over would react
   for (let i = 0; i < bubbles.length; i++) {
     let distance = dist(mouseX, mouseY, bubbles[i].x, bubbles[i].y);
-    if (distance < (bubbles[i].d / 2)) {
-      shortestDistanceBubble = bubbles[i];
+    if (distance < (bubbles[i].d / 2)) { // Was the click inside the bubble?
+      if (distance < shortestDistance || shortestDistance == null){ // Was the click closer than all previous bubbles or is this the first finding?
+        shortestDistanceBubble = bubbles[i];
+        shortestDistance = distance;
+      }
     }
-    
   }
   // If we have found any bubble...
   if(shortestDistanceBubble != undefined){
@@ -113,7 +116,6 @@ class Bubble {
     this.monthNumber = monthNumber;
     this.weatherData = weatherData;
     this.isActive = false;
-
   }
 
   // If clicked closer that the radius we say the circle was clicked
