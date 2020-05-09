@@ -36,6 +36,7 @@ function draw() {
     // mouse pressed
     if (mouseIsPressed) {
       fill(0, 255, 0);
+      //link("https://orf.at/");
     } else {
       fill(255);
     }
@@ -48,3 +49,7 @@ function draw() {
   rect(x, y, w, h);
 
 }
+
+/*function link(url, winName, options) {
+  winName && open(url, winName, options) || (location = url);
+}*/
