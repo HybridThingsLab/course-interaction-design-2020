@@ -34,8 +34,8 @@ function setup() {
         modulationFrequency: 0.2
       },
       envelope: {
-        attack: 0.02,
-        decay: 0.1,
+        attack: 0.002,
+        decay: 0.8,
         sustain: 0.05, // change here!!!
         release: 0.9,
       }
@@ -57,7 +57,7 @@ function draw() {
 
   // play note
   if ((frameCount % 10) == 0) {
-    //playNote();
+    playNote();
   }
 
 
@@ -67,13 +67,13 @@ function draw() {
 function mousePressed() {
 
   // play Note
-  playNote();
+  playNote(); // IMPORTANT: in Google Chrome at least one time a note must be triggerd through an interaction by the user!!!
 
 }
 
 function playNote() {
   // or number
-  let freq = 40;
+  let freq = 80;
   let randomFactor = int(random(1, 8));
   synths[counterSynths].triggerAttackRelease(freq * randomFactor, 2);
 

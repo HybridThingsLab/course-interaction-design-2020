@@ -6,7 +6,7 @@
 
 // sound
 let fmOsc;
-let volume = 1.0;
+let volume = 0.9;
 
 // preload
 function preload() {
