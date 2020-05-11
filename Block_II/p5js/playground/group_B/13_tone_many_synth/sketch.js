@@ -8,6 +8,7 @@
 let synths = [];
 let volume = 0.1;
 let counterSynths = 0;
+let pressed = false;
 
 // preload
 function preload() {
@@ -36,7 +37,7 @@ function setup() {
       envelope: {
         attack: 0.002,
         decay: 0.8,
-        sustain: 0.05, // change here!!!
+        sustain: 0.005, // change here!!!
         release: 0.9,
       }
     });
@@ -55,9 +56,20 @@ function draw() {
   // clear background
   background(0);
 
+  // show message
+  if (pressed == false) {
+    fill(255);
+    noStroke();
+    textAlign(CENTER, CENTER);
+    text("PRESS ME TO START SOUND", width / 2, height / 2);
+  }
+
   // play note
   if ((frameCount % 10) == 0) {
-    playNote();
+    // just if note is triggered once via mouse interaction
+    if (pressed == true) {
+      playNote();
+    }
   }
 
 
@@ -66,12 +78,17 @@ function draw() {
 // mouse pressed
 function mousePressed() {
 
+  // state pressed
+  pressed = true;
+
   // play Note
   playNote(); // IMPORTANT: in Google Chrome at least one time a note must be triggerd through an interaction by the user!!!
+
 
 }
 
 function playNote() {
+
   // or number
   let freq = 80;
   let randomFactor = int(random(1, 8));
