@@ -6,7 +6,7 @@
 
 // sound
 let synth;
-let volume = 1.0;
+let volume = 0.2;
 
 // preload
 function preload() {
@@ -55,9 +55,9 @@ function draw() {
 function mousePressed() {
   // play note
   // choose a note
-  let note = random(["A2", "C3", "D2", "E2", "G3"]);
+  //let note = random(["A2", "C3", "D2", "E2", "G3"]);
   // use note
-  synth.triggerAttackRelease(note, '8n'); // try also 8n, 4n, 2n...
+  //synth.triggerAttackRelease(note, '8n'); // try also 8n, 4n, 2n...
   // or number
-  // synth.triggerAttackRelease(random(80, 200), 0.10);
+  synth.triggerAttackRelease(random(80, 200), 0.10);
 }
