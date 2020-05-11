@@ -34,4 +34,5 @@ For this course you will need
     * If Mac warns you because of the "non-verified Developer", hit "cancel", right-click the Apps Symbol > Open and the click "Open"
     * On Windows you may have to "Allow Access" when the Firewall warning pops up
 
-### Exaple sketches for P5.js
+### Example sketches for P5.js
+https://github.com/HybridThingsLab/course-interaction-design/tree/master/Block_III/p5js/examples/01_template
