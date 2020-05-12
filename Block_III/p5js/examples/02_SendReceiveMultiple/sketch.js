@@ -1,4 +1,4 @@
-// On Arduino, upload the Example "arduino/SerialCommunication.ino"
+// On Arduino, upload the Example "arduino/CommunicationFunken.ino"
 // I added the Library "libraries/p5.serialport.js" in the index.html
 
 let file, data;
@@ -7,6 +7,7 @@ let serial;   // variable to hold an instance of the serialport library
 let latestData = "waiting for data";  // you'll use this to write incoming data to the canvas
 
 let millisLastSent = 0;
+let currentIndex = 0;
 
 
 // preload
@@ -37,7 +38,7 @@ function setup() {
   // Here are the callbacks that you can register
   serial.on('connected', serverConnected); // When we connect to the underlying server  
   serial.on('list', gotList); // When we get a list of serial ports that are available
-  serial.on('data', gotData); // When we some data from the serial port
+  serial.on('data', gotData); // When we get some data from the serial port
   serial.on('error', gotError); // When or if we get an error
   serial.on('open', gotOpen); // When our serial port is opened and ready for read/write
   serial.on('close', gotClose);
@@ -48,31 +49,49 @@ function setup() {
 function draw() {
   background(0)
 
-  //for (let i = 0; i < data.length; i++) {
-  for (let i = 0; i < 1; i++) {
-    let currentDate = data[i].MESS_DATUM;
-    let currentData = data[i].TMK;
-
-    // Write the date and the current data
-    noStroke();
-    fill(255);
-    textSize(12);
-    textAlign(CENTER, CENTER);
-    text(currentDate + ": " + currentData, width / 2, height / 2);
-  }
+  // Split the Stuff we received into seperate values, we seperated them in Arduino with a blank space
+  let receivedValues = split(latestData, " ");
 
   // Write the last data that was coming in
   noStroke();
   fill(255);
-  textSize(12);
+  textSize(20);
   textAlign(CENTER, CENTER);
-  text("latestData: " + latestData, width / 2, height / 2 + 50);
+  text("potentiometer: " + receivedValues[0] + ", random: " + receivedValues[1], width / 2, height / 2 - 75);
 
-  let millisNow = millis();
-  if(millisNow - millisLastSent > 100){
-    serial.write(Number(map(latestData, 0, 1023, 0, 255))); // This data will get sent as a "byte", so it can only be from 0 to 255 and we have to convert it to "Number"
-    console.log(latestData);
-    millisLastSent = millisNow;
+  // Obtain the date and a value from your data at the index we will count upwards
+  let currentDate = data[currentIndex].MESS_DATUM;
+  let temperature = data[currentIndex].TMK;
+  let precipitation = data[currentIndex].RSK;
+  // Write the date and the current data
+  noStroke();
+  fill(255);
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  text(currentDate, width / 2, height / 2);
+  text("TMK " + temperature + ", RSK: " + precipitation, width / 2, height / 2 + 25);
+
+  // Here we will send the value to Arduino, do not doo this too often, it will block your system
+  // Therefor we will only do this every some milliseconds
+  if(millis() - millisLastSent > 250){
+    // Go one value further
+    currentIndex = currentIndex + 1;
+    if(currentIndex >= data.length) currentIndex = 0;
+
+    let mappedTemperature = round(map(temperature, -20, 40, 0, 255)); // Map the temperature (-10 to 40) to the range of byte (0 to 255) 
+    let mappedPrecipitation = round(map(precipitation, 0, 10, 0, 255)); // Map the temperature (-10 to 40) to the range of byte (0 to 255) 
+
+    // speak via FUNKEN protocoll (https://github.com/astefas/Funken/tree/master/src/Funken/examples)
+    serial.write("WHATEVER");
+    serial.write(" "); // If sending multiple variables, they are seperated with a blank space
+    serial.write(str(mappedTemperature)); // send integer as string
+    serial.write(" ");
+    serial.write(str(mappedPrecipitation)); // send integer as string
+    serial.write(10); // to finish your message, send a "line feed"
+
+    console.log(str("Sending TMK " + mappedTemperature + ", RSK: " + mappedPrecipitation));
+    
+    millisLastSent = millis();
   }
 }
 
