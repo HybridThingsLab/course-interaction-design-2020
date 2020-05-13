@@ -70,7 +70,10 @@ You will see some files but these are the most important:
 * If asked, allow the html to access the internet
 
 ### Make it your code!
-Please create your own code folder besides the `examples` folder and copy one of the example folders over, so that you have `Block_I/p5js/martin/01_read_data` for example. You should not change our examples as we may update them later.
+Please create your own code folder somewhere outside our code folder and copy one of the example folders over. You should not chage anythinig inside our code structure because it may interfere with future updates that we may do on the code if you use GIT (Collisions)
+
+## The "Blocks"
+We structured our course in three "Blocks", static, interactive and physical. Fore some Blocks there also is a Readme in the corresponding subfolder, for example in [Block_III](https://github.com/HybridThingsLab/course-interaction-design/blob/master/Block_III/README.md).
 
 ## Recommended tutorials
 * beginner P5.js tutorials by Daniel Shiffmann on TheCodingTrain, https://thecodingtrain.com/beginners/p5js/
