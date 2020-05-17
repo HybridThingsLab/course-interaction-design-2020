@@ -35,7 +35,7 @@ function setup() {
         modulationFrequency: 0.2
       },
       envelope: {
-        attack: 0.002,
+        attack: 0.00002,
         decay: 0.8,
         sustain: 0.005, // change here!!!
         release: 0.9,
