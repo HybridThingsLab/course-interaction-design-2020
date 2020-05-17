@@ -1,4 +1,4 @@
-// use this digital sensors from your Grove Kit
+// use one of these digital sensors from your Grove Kit
 // https://wiki.seeedstudio.com/Grove-Button/
 // https://wiki.seeedstudio.com/Grove-Touch_Sensor/
 
