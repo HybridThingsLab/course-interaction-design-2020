@@ -8,7 +8,7 @@ const int digitalOutPin = 6;  // digital output pin that the actuator is attache
 
 void setup() {
   
-  // initialize digital pin as an input:
+  // initialize digital pin as an output:
   pinMode(digitalOutPin, OUTPUT);
   
 }
