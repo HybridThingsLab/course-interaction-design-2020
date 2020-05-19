@@ -15,7 +15,7 @@ void setup() {
   pinMode(digitalInPin, INPUT);
 }
 
-void loop() {
+void loop() { 
   
   // read the digital pin
   sensorValue = digitalRead(digitalInPin);
