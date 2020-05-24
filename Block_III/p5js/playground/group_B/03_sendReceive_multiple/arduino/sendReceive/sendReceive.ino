@@ -1,7 +1,7 @@
 // use servo from your Grove Kit
 // https://wiki.seeedstudio.com/Grove-Servo/
 
-// funken library
+// Funken library
 // Download the Funken library here: https://github.com/astefas/Funken/tree/master/bin
 // Install with Sketch > Include Library > Add .ZIP Library
 #include <Funken.h>
