@@ -57,3 +57,11 @@ function draw() {
   text("value: " + receivedValues[0], width / 2, height / 2 - 75);
 
 }
+
+// There is data available to work with from the serial port
+function gotData() {
+  let currentString = serial.readLine(); // read the incoming string
+  trim(currentString); // remove any trailing whitespace
+  if (!currentString) return; // if the string is empty, do no more
+  latestData = currentString; // save it for the draw method
+}
