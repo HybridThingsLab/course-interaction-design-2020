@@ -3,6 +3,7 @@
 // also add "libraries/serial.js" which contains callback functions for "p5.serialport.js"
 
 let serial; // variable to hold an instance of the serialport library
+let latestData = "waiting for data"; // you'll use this to write incoming data to the canvas
 
 
 // preload
@@ -50,6 +51,16 @@ function draw() {
   textAlign(CENTER, CENTER);
   text("MOVE MOUSE", width / 2, height / 2);
 
+  // read values from Arduino
+
+  // Split the Stuff we received into seperate values, we seperated them in Arduino with a blank space
+  let receivedValues = split(latestData, " "); // for now just one values is sent from Arduino
+
+  fill(255);
+  textSize(18);
+  textAlign(LEFT, LEFT);
+  text("potentiometer: " + receivedValues[0] + "    switch: " + receivedValues[1], 32, 32);
+
   // Here we will send the value to Arduino, do not doo this too often, it will block your system
   // just every x frames (every 2nd frame)
   if (frameCount % 2 == 0) {
@@ -57,12 +68,15 @@ function draw() {
     // Write mapped mouse x position to serial port 
 
     let mappedMouseX = int(map(mouseX, 0, width, 0, 180)); // to servo (0-180)
+    let mappedMouseY = int(map(mouseY, 0, height, 0, 255)); // to LED (0-255)
 
     console.log(mappedMouseX);
 
     serial.write("WHATEVER");
     serial.write(" "); // If sending multiple variables, they are seperated with a blank space
     serial.write(str(mappedMouseX)); // send integer as string
+    serial.write(" "); // If sending multiple variables, they are seperated with a blank space
+    serial.write(str(mappedMouseY)); // send integer as string
     serial.write(10); // to finish your message, send a "line feed"
 
   }

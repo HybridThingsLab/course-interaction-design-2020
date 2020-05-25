@@ -29,7 +29,6 @@ function gotError(theerror) {
     console.log(theerror);
 }
 
-
 // We got raw from the serial port
 function gotRawData(thedata) {
     //console.log("gotRawData" + thedata);
