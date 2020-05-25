@@ -26,7 +26,7 @@ function setup() {
 
   // Assuming our Arduino is connected, let's open the connection to it
   // serial.open("COM5"); // fill in your serial port name here, find it in p5.serialcontrol under "Connect"
-  serial.open("/dev/tty.usbmodem301"); // On Mac it may be something like this
+  serial.open("/dev/tty.usbmodem141101"); // On Mac it may be something like this
 
   // Here are the callbacks that you can register > see also "libraries/serial.js"
   serial.on('connected', serverConnected); // When we connect to the underlying server  

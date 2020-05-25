@@ -26,8 +26,7 @@ void loop() {
 
   // Do not try to send Serial stuff too often, be prevent this by checking when we sent the last time
   if((millis() - lastSent) > updateSerial){
-    // read the analog in value:
-    sensorValue = analogRead(analogInPin);
+
     // print the results to the Serial Monitor:
     Serial.println(sensorValue);
     // update timestamp last sent
