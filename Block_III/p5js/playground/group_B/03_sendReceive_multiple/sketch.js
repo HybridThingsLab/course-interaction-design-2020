@@ -1,4 +1,4 @@
-// On Arduino, upload the Example "arduino/receiveDataFromP5js.ino"
+// On Arduino, upload the Example "arduino/sendReceive.ino"
 // add the Library "libraries/p5.serialport.js" in the index.html
 // also add "libraries/serial.js" which contains callback functions for "p5.serialport.js"
 
