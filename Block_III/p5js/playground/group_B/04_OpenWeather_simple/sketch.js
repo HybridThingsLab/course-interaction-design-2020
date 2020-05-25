@@ -17,7 +17,12 @@ function preload() {
   // The URL for the JSON data from openweathermap.org (replace "imperial" with "metric" for celsius)
   // change this with your key!!!
   let apiKey = "8b7442a39a8d1591af2eaa935816e9a7";
-  let url = "https://api.openweathermap.org/data/2.5/weather?id=2954172&units=metric&APPID=" + apiKey;
+  // city ID (Augsburg)
+  // find other City IDs here: https://openweathermap.org/find?q=
+  // click on city and see ID in URL of browser
+  let cityID = "2954172";
+  // URL
+  let url = "https://api.openweathermap.org/data/2.5/weather?id=" + cityID + "&units=metric&APPID=" + apiKey;
   json = loadJSON(url);
 }
 
