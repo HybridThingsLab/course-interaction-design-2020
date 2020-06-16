@@ -41,7 +41,8 @@ We strongly recommend Google Chrome, https://www.google.com/chrome/
 How to set Chrome as your default browser for Live Server in Visual Studio Code:
 
 * Install extension 'Live Server' (see instructions above)
-* Go to File > Preferences > Settings
+* On Windows Go to File > Preferences > Settings
+* On Mac Go to Code > Preferences > Settings
 * Search for "browser"
 * In settings "Live Server > Settings: Custom Browser" choose "Chrome"
 
