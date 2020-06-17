@@ -48,7 +48,7 @@ let buttonValue = 0;
 //NEBEL
 function preload() {
 
-    /*
+
     nebel = loadImage('Nebel.jpg');
 
     song = loadSound('rain-01.mp3');
@@ -56,7 +56,7 @@ function preload() {
 
     thunder = loadSound('gewitter.mp3');
     thunder.playMode(modeS);
-*/
+
 
     let apiKey = "8b7442a39a8d1591af2eaa935816e9a7";
 
@@ -105,7 +105,7 @@ function draw() {
     //sunshine();
     //drizzle();
     //nebelin();
-    //soundLeise();
+    soundLeise();
     //thunderStorm();
 
     // read latest serial data
